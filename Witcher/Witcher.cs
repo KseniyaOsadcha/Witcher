@@ -9,12 +9,14 @@ namespace Witcher
         public double force; 
         public double protect; // must be less than 90
         public double life;
+        public double currentLife;
         public Inventory inventory;
 
         public Witcher(string name, double life, Inventory inventory)
         {
             this.name = name;
             this.life = life;
+            this.currentLife = life;
             this.inventory = inventory;
         }
 

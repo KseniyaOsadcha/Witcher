@@ -20,30 +20,33 @@ namespace Witcher
             Console.WriteLine();
             Console.WriteLine();
 
-            foreach (Witcher witcher in witchers)
-            {
-                Console.WriteLine("Wither's info");
-                Console.WriteLine();
-                witcher.info();
-                Console.WriteLine();
-                Console.WriteLine("Wither's inventory");
-                Console.WriteLine();
+            //foreach (Witcher witcher in witchers)
+            //{
+            //    Console.WriteLine("Wither's info");
+            //    Console.WriteLine();
+            //    witcher.info();
+            //    Console.WriteLine();
+            //    Console.WriteLine("Wither's inventory");
+            //    Console.WriteLine();
 
-                Console.WriteLine("Wither's potions");
-                witcher.inventory.potions.ForEach(x => x.info());
-                Console.WriteLine();
-                Console.WriteLine("Wither's clothes");
-                witcher.inventory.clothes.ForEach(x => x.info());
-                Console.WriteLine();
-                Console.WriteLine("Wither's weapons");
-                witcher.inventory.weapons.ForEach(x => x.info());
+            //    Console.WriteLine("Wither's potions");
+            //    witcher.inventory.potions.ForEach(x => x.info());
+            //    Console.WriteLine();
+            //    Console.WriteLine("Wither's clothes");
+            //    witcher.inventory.clothes.ForEach(x => x.info());
+            //    Console.WriteLine();
+            //    Console.WriteLine("Wither's weapons");
+            //    witcher.inventory.weapons.ForEach(x => x.info());
                 
                 
-                Console.WriteLine();
-                Console.WriteLine();
+            //    Console.WriteLine();
+            //    Console.WriteLine();
 
-            }
+            //}
 
+            Game g = new Game();
+            g.players = witchers;
+            g.start_tournament();
         }
 
         static string[] names = { "Bill", "Poli", "James", "Agent007", "Dog" };
